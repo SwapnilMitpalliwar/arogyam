@@ -1,0 +1,22 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Sign In</mat-card-title>
+    </mat-card-header>
+    <form class="example-form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Phone number">
+        </mat-form-field>
+        <mat-form-field *ngIf="showSignIn" class="example-full-width">
+          <input matInput placeholder="OTP">
+        </mat-form-field>
+      </mat-card-content>
+      <button mat-stroked-button *ngIf="!showSignIn" (click)="showSignIn = true" color="accent" class="btn-block">Get OTP</button>
+      <button mat-stroked-button *ngIf="showSignIn" (click)="signIn()" color="accent" class="btn-block">Sign-in</button>
+      <div class="sign-up-container">
+        <a routerLink='/signup' class="positronx signup">Sign up</a>
+      </div>
+    </form>
+  </mat-card>
+</div>

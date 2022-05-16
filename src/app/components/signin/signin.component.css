@@ -1,0 +1,8 @@
+.signup {
+    color: #3f51b5;
+}
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
